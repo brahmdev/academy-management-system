@@ -18,8 +18,8 @@ img{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   .header{
-    z-index: 999;
     width: 100%;
+    z-index: 999;
     height: @nav-height;
     top: 0;
     position: fixed;
@@ -57,6 +57,7 @@ img{
   }
   .sidebar{
     height: 100%;
+    z-index: 1000;
     width: @sidebar-width;
     top: 0;
     position: fixed;
@@ -71,10 +72,15 @@ img{
         i{
           margin-right: 10px;
         }
+        img {
+          vertical-align: middle;
+          margin-right: 0.25rem !important;
+        }
       }
     }
     .menu{
-      margin-top: 70px;
+      height: 100vh;
+      overflow-x: auto;
     }
   }
   .main-content{
