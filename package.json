@@ -8,16 +8,23 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^2.5.21"
+    "vue": "^2.5.21",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "echarts": "^3.7.1",
+    "iview": "^2.0.0-rc.17",
+    "style-loader": "^0.18.2",
+    "vm-editor": "^0.1.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.3.0",
-    "@vue/cli-plugin-eslint": "^3.3.0",
     "@vue/cli-service": "^3.3.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.4"
   },
   "eslintConfig": {
     "root": true,
@@ -28,10 +35,7 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
+    "rules": {}
   },
   "postcss": {
     "plugins": {
