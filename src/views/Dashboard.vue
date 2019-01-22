@@ -1,15 +1,91 @@
 <template>
   <div class="dashboard">
     <Row :gutter="16">
-      Dashboard page
+      <Col :lg="6" :md="12">
+        <VmStateOverView color="#41b883" icon="fa fa-user-graduate" title="Total Student" count="996"></VmStateOverView>
+      </Col>
+      <Col :lg="6" :md="12">
+        <VmStateOverView color="#1d8ce0" icon="fas fa-chart-line" title="Revenue" count="109009 INR"></VmStateOverView>
+      </Col>
+      <Col :lg="6" :md="12">
+        <VmStateOverView color="#ffa000" icon="fas fa-balance-scale" title="Expense" count="10123 INR"></VmStateOverView>
+      </Col>
+      <Col :lg="6" :md="12">
+        <VmStateOverView color="#f60000" icon="fas fa-rupee-sign" title="Profit" count="105486 INR"></VmStateOverView>
+      </Col>
+    </Row>
+    <Row :gutter="16">
+      <Col :lg="6">
+        <VmUserPreview :brief="dataUserPreview.brief" :property="dataUserPreview.property"></VmUserPreview>
+      </Col>
+      <Col :lg="18">
+        <VmProgress title="Working Progress" :data="dataProgress"></VmProgress>
+      </Col>  
+    </Row>
+    <Row :gutter="16">
+      <Col :lg="16">
+        <VmTimeline title="Timeline" :data="dataTimeline">
+        </VmTimeline>
+      </Col>
+      <Col :lg="8">
+        <VmTabs icon="fa fa-user" title="Briefs" content-height="200px">
+          <VmTabsItem label="Social" name="01">
+            <div class="demo-news">
+              <h2>" Lorem ipsum dolor sit amet, consectetur adipiscing. "</h2>
+            </div>
+          </VmTabsItem>
+          <VmTabsItem label="Business" name="02">
+            <div class="demo-news">
+              <h2>" Phasellus massa urna, vehicula bibendum. "</h2>
+            </div>
+          </VmTabsItem>
+          <VmTabsItem label="Entertainment" name="03">
+            <div class="demo-news">
+              <h2>" Duis vitae dictum erat. In ut lorem turpis. "</h2>
+            </div>
+          </VmTabsItem>
+          <VmTabsItem label="Sport" name="04">
+            <div class="demo-news">
+              <h2>" Etiam sit amet urna feugiat, laoreet urna quis. "</h2>
+            </div>
+          </VmTabsItem>
+          <VmTabsItem label="Health" name="05">
+            <div class="demo-news">
+              <h2>" Fusce nec eleifend ligula. "</h2>
+            </div>
+          </VmTabsItem>
+          <VmTabsItem label="Education" name="06">
+            <div class="demo-news">
+              <h2>" Fusce commodo nunc justo, id mattis. "</h2>
+            </div>
+          </VmTabsItem>
+        </VmTabs>
+        <VmWeather class="vm-margin" :data="dataWeather">
+        </VmWeather>
+      </Col> 
     </Row>
   </div>
 </template>
 
 <script>
-
+import VmStateOverView from '@/components/vm-state-overview.vue'
+import VmUserPreview from '@/components/vm-user-preview.vue'
+import VmProgress from '@/components/vm-progress.vue'
+import VmTimeline from '@/components/vm-timeline.vue'
+import VmTabs from '@/components/vm-tabs.vue'
+import VmTabsItem from '@/components/vm-tabs-item.vue'
+import VmWeather from '@/components/vm-weather.vue'
 export default {
   name: 'Dashboard',
+  components: {
+    VmStateOverView,
+    VmUserPreview,
+    VmProgress,
+    VmTimeline,
+    VmTabs,
+    VmTabsItem,
+    VmWeather
+  },
   data () {
     return {
       dataUserPreview: {

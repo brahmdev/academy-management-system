@@ -57,7 +57,7 @@ img{
   }
   .sidebar{
     height: 100%;
-    z-index: 1000;
+    //z-index: 1000;
     width: @sidebar-width;
     top: 0;
     position: fixed;
@@ -79,14 +79,44 @@ img{
       }
     }
     .menu{
-      height: 100vh;
-      overflow-x: auto;
+      margin-top: 70px;
     }
   }
   .main-content{
     position: relative;
     margin-left: @sidebar-width;
     padding: 60px 15px 15px 15px;
+  }
+
+  .viewport {
+    overflow: auto;
+ 
+    /* Make sure the inner div is not larger than the container
+     * so that we have room to scroll.
+     */
+    max-height: 100%;
+
+    /* Pick an arbitrary margin/padding that should be bigger
+     * than the max width of all the scroll bars across
+     * the devices you are targeting.
+     * padding = -margin
+     */
+    margin-right: -100px;
+    padding-right: 100px;
+  }
+
+  .hide-scroll {
+      overflow: hidden;
+  }
+
+  /* Optional styles */
+  .hide-scroll {
+      padding: 0 5px;
+      position: relative;
+      height: 100vh;
+  }
+  .viewport p:last-child {
+      margin-bottom: 2em;
   }
 }
 
