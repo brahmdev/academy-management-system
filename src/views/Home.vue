@@ -33,7 +33,7 @@
                       Admission
                   </template>
                   <Menu-item name="Student">
-                    <router-link to="/basic-table">
+                    <router-link to="/addStudent">
                       <i class="fas fa-plus"></i>Student
                     </router-link>
                   </Menu-item>
